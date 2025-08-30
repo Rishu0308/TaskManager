@@ -13,7 +13,7 @@ const Login = ({onSubmit}) => {
   const [formData, setFormData] = useState(INITIAL_FORM);
   const [rememberMe, setRememberMe] = useState(false);
   const navigate = useNavigate();
-  const url = "http://localhost:4000";
+  const url = import.meta.env.VITE_BACKEND_URL;
 
   // Restore session if token exists
   useEffect(() => {

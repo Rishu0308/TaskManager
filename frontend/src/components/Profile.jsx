@@ -5,7 +5,7 @@ import { ChevronLeft, Save, UserCircle, Shield, Lock, LogOut } from "lucide-reac
 import { useNavigate } from "react-router-dom"
 import axios from "axios"
 
-const API_URL = "http://localhost:4000"
+const API_URL = import.meta.env.VITE_BACKEND_URL
 
 const Profile = ({ setCurrentUser, onLogOut }) => {
   const [profile, setProfile] = useState({ name: "", email: "" })
