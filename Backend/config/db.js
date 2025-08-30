@@ -1,6 +1,6 @@
 import mongoose, { connect, mongo } from "mongoose";
 
 export const connectDB = async() =>{
-    await mongoose.connect('mongodb+srv://rishu1618r2:rishu1618r2@cluster0.pyhxxmz.mongodb.net/Taskflow')
+    await mongoose.connect(process.env.ATLAS_URL)
     .then (() => console.log ('DB CONNECT'));
 }
